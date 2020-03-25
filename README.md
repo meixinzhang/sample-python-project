@@ -1,7 +1,7 @@
-sample_python_project
+Sample Python Data Science Project
 ==============================
 
-A short description of the project.
+A starting point for all data science projects.
 
 Project Organization
 ------------
