@@ -3,10 +3,43 @@ Sample Python Data Science Project
 
 A starting point for all data science projects.
 
+Getting Started
+------------
+
+To get started using this repo, run
+
+```sh
+$ pip install -r requirements.txt --upgrade
+```
+
+### Setup .env File for Python Decouple
+
+Add your environmental variables to .env file, 
+
+```sh
+PYTHONPATH="/Users/usr/PATH_TO_REPO/"
+```
+
+use it like the following in your code:
+
+```py
+from decouple import config
+config('PYTHONPATH')
+```
+
+Check <a href='https://simpleisbetterthancomplex.com/2015/11/26/package-of-the-week-python-decouple.html'>here</a> for more information on python decouple.
+
+Contributing to the Repo
+------------
+
+Before commiting your changes, don't forget to run the following command to ensure there are no errors.
+```sh
+$ python -m unittest discover ./tests/
+```
+
 Project Organization
 ------------
 
-    ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
     ├── README.md          <- The top-level README for developers using this project.
     ├── data

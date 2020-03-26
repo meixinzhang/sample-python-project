@@ -1,30 +1,26 @@
-# -*- coding: utf-8 -*-
-import click
-import logging
-from pathlib import Path
-from dotenv import find_dotenv, load_dotenv
+from src.common.base import BaseHelpers
+from decouple import config
+import os
 
+class MakeDataset(BaseHelpers): 
+    def __init__(self, input_filepath, output_filepath, **kwargs): 
+        """
+        Arguments:
+            input_filepath {str} -- filepath from PYTHONPATH
+            output_filepath {str} -- filepath from PYTHONPATH
+        """
+        super(MakeDataset, self).__init__(**kwargs)
+        self.input_filepath = os.path.join(config('PYTHONPATH'), input_filepath)
+        self.output_filepath = os.path.join(config('PYTHONPATH'), output_filepath)
 
-@click.command()
-@click.argument('input_filepath', type=click.Path(exists=True))
-@click.argument('output_filepath', type=click.Path())
-def main(input_filepath, output_filepath):
-    """ Runs data processing scripts to turn raw data from (../raw) into
-        cleaned data ready to be analyzed (saved in ../processed).
-    """
-    logger = logging.getLogger(__name__)
-    logger.info('making final data set from raw data')
+    def make_dataset(self):
+        """ Runs data processing scripts to turn raw data from (../raw) into
+            cleaned data ready to be analyzed (saved in ../processed).
+        """
+        self.log.info('making final data set from raw data')
+        pass
 
 
 if __name__ == '__main__':
-    log_fmt = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    logging.basicConfig(level=logging.INFO, format=log_fmt)
-
-    # not used in this stub but often useful for finding various files
-    project_dir = Path(__file__).resolve().parents[2]
-
-    # find .env automagically by walking up directories until it's found, then
-    # load up the .env entries as environment variables
-    load_dotenv(find_dotenv())
-
-    main()
+    data = MakeDataset('/data/raw/test.csv', '/data/processed/test.csv')
+    data.make_dataset()
