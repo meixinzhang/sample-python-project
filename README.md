@@ -6,7 +6,7 @@ A starting point for all data science projects.
 Getting Started
 ------------
 
-To get started using this repo, run
+To get started using this repo, run this command
 
 ```sh
 $ pip install -r requirements.txt --upgrade
@@ -14,13 +14,13 @@ $ pip install -r requirements.txt --upgrade
 
 ### Setup .env File for Python Decouple
 
-Add your environmental variables to .env file, 
+Add your environmental variables to .env file
 
 ```sh
 PYTHONPATH="/Users/usr/PATH_TO_REPO/"
 ```
 
-use it like the following in your code:
+and use it like this in your code
 
 ```py
 from decouple import config
