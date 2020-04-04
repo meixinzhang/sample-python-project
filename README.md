@@ -6,7 +6,7 @@ A starting point for all data science projects.
 Getting Started
 ------------
 
-To get started using this repo, run
+To get started using this repo
 
 ```sh
 $ pip install -r requirements.txt --upgrade
@@ -46,16 +46,8 @@ source ./example_repo_env/bin/activate
 ```
  
 ### Database Setup for PostgreSQL
-To setup Postgres and an engine for a Postgres database, refer to documentation <a href="https://git.analytics.deloitte.ca/Data-Science/omnia-ds/blob/master/docs/">here</a>.
+To setup Postgres and an engine for a Postgres database, refer to documentation <a href="https://docs.sqlalchemy.org/en/13/core/engines.html">here</a>.
 
-
-Contributing to the Repo
-------------
-
-Before commiting your changes, don't forget to run the following command to ensure there are no errors.
-```sh
-$ python -m unittest discover ./tests/
-```
 
 Project Organization
 ------------
