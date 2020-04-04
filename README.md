@@ -6,21 +6,26 @@ A starting point for all data science projects.
 Getting Started
 ------------
 
-To get started using this repo, run this command
+To get started using this repo, run
 
 ```sh
 $ pip install -r requirements.txt --upgrade
 ```
 
+Ensure all tests run
+```sh
+python -m unittest discover ./src/cargo/tests
+```
+
 ### Setup .env File for Python Decouple
 
-Add your environmental variables to .env file
+Add your environmental variables to .env file, 
 
 ```sh
 PYTHONPATH="/Users/usr/PATH_TO_REPO/"
 ```
 
-and use it like this in your code
+use it like the following in your code:
 
 ```py
 from decouple import config
@@ -28,6 +33,21 @@ config('PYTHONPATH')
 ```
 
 Check <a href='https://simpleisbetterthancomplex.com/2015/11/26/package-of-the-week-python-decouple.html'>here</a> for more information on python decouple.
+
+
+Useful Notes
+-----------
+ 
+### Setup Virtual Environment
+```sh
+cd ./example_repo
+virtualenv example_repo_env
+source ./example_repo_env/bin/activate
+```
+ 
+### Database Setup for PostgreSQL
+To setup Postgres and an engine for a Postgres database, refer to documentation <a href="https://git.analytics.deloitte.ca/Data-Science/omnia-ds/blob/master/docs/">here</a>.
+
 
 Contributing to the Repo
 ------------
