@@ -1,4 +1,6 @@
+from src.common.sql_helpers.pipeline import SqlFeaturePipeline
 from src.common.base import BaseHelpers
+from sqlalchemy import create_engine
 from decouple import config
 import os
 
@@ -24,3 +26,18 @@ class MakeDataset(BaseHelpers):
 if __name__ == '__main__':
     data = MakeDataset('/data/raw/test.csv', '/data/processed/test.csv')
     data.make_dataset()
+
+
+# connection_string = config('ENGINE_PATH')
+# class MakeDatasetSql():
+#     def __init__(self):
+#         self.engine = create_engine(connection_string)
+#         self.pipeliner = SqlFeaturePipeline(self.engine)
+
+#     def make_ads(self):
+#         self.pipeliner.import_scripts(os.path.join(config('PYTHONPATH'), "src/data/sql/"))
+#         self.pipeliner.run()
+
+# if __name__ == "__main__":
+#     data_maker = MakeDatasetSql()
+#     data_maker.make_ads()
