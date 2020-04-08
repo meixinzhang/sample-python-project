@@ -14,7 +14,8 @@ $ pip install -r requirements.txt --upgrade
 
 Ensure all tests run
 ```sh
-python -m unittest discover ./src/common/tests
+python -m unittest discover ./src/common/tests/
+python -m unittest discover ./tests/
 ```
 
 ### Setup .env File for Python Decouple
