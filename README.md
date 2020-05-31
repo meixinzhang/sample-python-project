@@ -33,7 +33,7 @@ from decouple import config
 config('PYTHONPATH')
 ```
 
-Check <a href='https://simpleisbetterthancomplex.com/2015/11/26/package-of-the-week-python-decouple.html'>here</a> for more information on python decouple.
+Check [here](https://simpleisbetterthancomplex.com/2015/11/26/package-of-the-week-python-decouple.html) for more information on python decouple.
 
 
 Useful Notes
@@ -47,7 +47,7 @@ source ./example_repo_env/bin/activate
 ```
  
 ### Database Setup for PostgreSQL
-To setup Postgres and an engine for a Postgres database, refer to documentation <a href="https://docs.sqlalchemy.org/en/13/core/engines.html">here</a>.
+To setup Postgres and an engine for a Postgres database, refer to documentation [here](https://docs.sqlalchemy.org/en/13/core/engines.html).
 
 
 Project Organization
