@@ -18,7 +18,18 @@ python -m unittest discover ./src/common/tests/
 python -m unittest discover ./tests/
 ```
 
-### Setup .env File for Python Decouple
+
+Useful Notes
+-----------
+
+### Setup Virtual Environment
+```sh
+cd ./example_repo
+virtualenv example_repo_env
+source ./example_repo_env/bin/activate
+```
+
+### Setup .env File with Python Decouple
 
 Add your environmental variables to .env file, 
 
@@ -35,16 +46,6 @@ config('PYTHONPATH')
 
 Check [here](https://simpleisbetterthancomplex.com/2015/11/26/package-of-the-week-python-decouple.html) for more information on python decouple.
 
-
-Useful Notes
------------
- 
-### Setup Virtual Environment
-```sh
-cd ./example_repo
-virtualenv example_repo_env
-source ./example_repo_env/bin/activate
-```
  
 ### Database Setup for PostgreSQL
 To setup Postgres and an engine for a Postgres database, refer to documentation [here](https://docs.sqlalchemy.org/en/13/core/engines.html).
